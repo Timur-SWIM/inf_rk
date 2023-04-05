@@ -81,12 +81,12 @@ clean: CMakeFiles/rk.dir/clean
 CMakeFiles/rk.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mac/Desktop/Project/C/inf_labs/rk/CMakeFiles --progress-num=1,2 "Built target rk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mac/Desktop/Project/C/inf_labs/rk/CMakeFiles --progress-num=1,2,3 "Built target rk"
 .PHONY : CMakeFiles/rk.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Desktop/Project/C/inf_labs/rk/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Desktop/Project/C/inf_labs/rk/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Desktop/Project/C/inf_labs/rk/CMakeFiles 0
 .PHONY : CMakeFiles/rk.dir/rule

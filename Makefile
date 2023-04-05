@@ -129,6 +129,30 @@ rk/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/build
 .PHONY : rk/fast
 
+args_check.o: args_check.c.o
+.PHONY : args_check.o
+
+# target to build an object file
+args_check.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.o
+.PHONY : args_check.c.o
+
+args_check.i: args_check.c.i
+.PHONY : args_check.i
+
+# target to preprocess a source file
+args_check.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.i
+.PHONY : args_check.c.i
+
+args_check.s: args_check.c.s
+.PHONY : args_check.s
+
+# target to generate assembly for a file
+args_check.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.s
+.PHONY : args_check.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... rk"
+	@echo "... args_check.o"
+	@echo "... args_check.i"
+	@echo "... args_check.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
