@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rk.dir/args_check.c.o.d"
   "CMakeFiles/rk.dir/main.c.o"
   "CMakeFiles/rk.dir/main.c.o.d"
+  "CMakeFiles/rk.dir/statistic.c.o"
+  "CMakeFiles/rk.dir/statistic.c.o.d"
   "rk"
   "rk.pdb"
 )

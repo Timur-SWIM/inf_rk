@@ -1,0 +1,5 @@
+Usage:
+    \t./game [options1] [options2] [options3]
+options1: easy, medium, hard - the difficulty level of the game
+options2: (1 - 59) - game time
+options3 - number of errors

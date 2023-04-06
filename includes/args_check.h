@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ncurses.h>
 #include "main.h"
 
 typedef struct {
@@ -15,6 +16,8 @@ typedef struct {
     int max_mistake;
 }args_t;
 
-int check(int argc, char *argv[], args_t args);
+void help();
+int check(int argc, char *argv[], args_t *p_args);
+void read_file(char level, FILE *input_file);
 
 #endif //RK_ARGS_CHECK_H

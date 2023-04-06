@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rk
+# Target rules for targets named game
 
 # Build rule for target.
-rk: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rk
-.PHONY : rk
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
 
 # fast build rule for target.
-rk/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/build
-.PHONY : rk/fast
+game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+.PHONY : game/fast
 
 args_check.o: args_check.c.o
 .PHONY : args_check.o
 
 # target to build an object file
 args_check.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.o
 .PHONY : args_check.c.o
 
 args_check.i: args_check.c.i
@@ -142,7 +142,7 @@ args_check.i: args_check.c.i
 
 # target to preprocess a source file
 args_check.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.i
 .PHONY : args_check.c.i
 
 args_check.s: args_check.c.s
@@ -150,7 +150,7 @@ args_check.s: args_check.c.s
 
 # target to generate assembly for a file
 args_check.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/args_check.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.s
 .PHONY : args_check.c.s
 
 main.o: main.c.o
@@ -158,7 +158,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -166,7 +166,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -174,8 +174,32 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rk.dir/build.make CMakeFiles/rk.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.c.s
 .PHONY : main.c.s
+
+statistic.o: statistic.c.o
+.PHONY : statistic.o
+
+# target to build an object file
+statistic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.o
+.PHONY : statistic.c.o
+
+statistic.i: statistic.c.i
+.PHONY : statistic.i
+
+# target to preprocess a source file
+statistic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.i
+.PHONY : statistic.c.i
+
+statistic.s: statistic.c.s
+.PHONY : statistic.s
+
+# target to generate assembly for a file
+statistic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.s
+.PHONY : statistic.c.s
 
 # Help Target
 help:
@@ -185,13 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... rk"
+	@echo "... game"
 	@echo "... args_check.o"
 	@echo "... args_check.i"
 	@echo "... args_check.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... statistic.o"
+	@echo "... statistic.i"
+	@echo "... statistic.s"
 .PHONY : help
 
 

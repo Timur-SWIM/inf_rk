@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mac/Desktop/Project/C/inf_labs/rk/args_check.c" "CMakeFiles/rk.dir/args_check.c.o" "gcc" "CMakeFiles/rk.dir/args_check.c.o.d"
   "/Users/mac/Desktop/Project/C/inf_labs/rk/main.c" "CMakeFiles/rk.dir/main.c.o" "gcc" "CMakeFiles/rk.dir/main.c.o.d"
+  "/Users/mac/Desktop/Project/C/inf_labs/rk/statistic.c" "CMakeFiles/rk.dir/statistic.c.o" "gcc" "CMakeFiles/rk.dir/statistic.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
