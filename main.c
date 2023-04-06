@@ -3,29 +3,31 @@
 int main(int argc, char *argv[]) {
     FILE *input_file;
 
-    args_t args;
+    args_t args;     //init arguments structure
     args_t *p_args;
     p_args = &args;
 
-    statistic_t stat;
+    statistic_t stat;   // init statistic structure
     statistic_t *p_stat;
     p_stat = &stat;
 
-    initscr();
-    start_color();
-    cbreak();
-    keypad(stdscr, TRUE);
+    initscr();         /* Start curses mode */
+    start_color();     /* Init color */
+    cbreak();          /* Line buffering disabled */
+    keypad(stdscr, TRUE); /* I need that nifty F1 	*/
     noecho();
 
-    init_pair(1, COLOR_GREEN, COLOR_BLACK);
-    init_pair(2, COLOR_RED, COLOR_BLACK);
-    init_pair(3, COLOR_CYAN, COLOR_BLACK);
+    init_pair(1, COLOR_GREEN, COLOR_BLACK);     // cor char
+    init_pair(2, COLOR_RED, COLOR_BLACK);       // incor char
+    init_pair(3, COLOR_CYAN, COLOR_BLACK);      // for text
 
-    int c, ch, y, x;
+    int c, ch;
+    int y, x;
 
+    /** Checking arguments **/
     check(argc, argv, p_args);
 
-    p_args->max_mistake = atoi(argv[3]);
+    /** Selecting the text to be read by level **/
     switch (args.level) {
         case 'e':
             input_file = fopen(EASY_FILE, "rt");
@@ -46,11 +48,12 @@ int main(int argc, char *argv[]) {
     printw("Press F1 to exit\n");
     attroff(COLOR_PAIR(3));
 
+    /** Text output to the screen **/
     while ((c = fgetc(input_file)) != EOF){
         printw("%c", c);
     }
-    getyx(stdscr, y, x);
 
+    getyx(stdscr, y, x);
     fseek(input_file, 0, SEEK_SET);
     move(1, 0);
 
@@ -58,6 +61,7 @@ int main(int argc, char *argv[]) {
     stat.incorrect_ch = 0;
     stat.sum_w = 0;
 
+    /** Starting the game **/
     time_t end_time = time(NULL) + args.max_time;
     while ((ch = getch()) != KEY_F(1)){
         c = fgetc(input_file);
@@ -78,7 +82,6 @@ int main(int argc, char *argv[]) {
             stat.sum_w++;
 
         if (stat.incorrect_ch > args.max_mistake){
-
             move(y, 0);
             attron(COLOR_PAIR(2));
             printw("Exceeded the number of mistake\n");
@@ -94,6 +97,7 @@ int main(int argc, char *argv[]) {
     move(y + 1, 0);
 
     int time = args.max_time;
+    /** Compilation of statistics **/
     statistic(time, p_stat);
     print_stat(p_stat);
 

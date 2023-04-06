@@ -129,30 +129,6 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-args_check.o: args_check.c.o
-.PHONY : args_check.o
-
-# target to build an object file
-args_check.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.o
-.PHONY : args_check.c.o
-
-args_check.i: args_check.c.i
-.PHONY : args_check.i
-
-# target to preprocess a source file
-args_check.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.i
-.PHONY : args_check.c.i
-
-args_check.s: args_check.c.s
-.PHONY : args_check.s
-
-# target to generate assembly for a file
-args_check.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/args_check.c.s
-.PHONY : args_check.c.s
-
 main.o: main.c.o
 .PHONY : main.o
 
@@ -177,29 +153,53 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.c.s
 .PHONY : main.c.s
 
-statistic.o: statistic.c.o
-.PHONY : statistic.o
+src/args_check.o: src/args_check.c.o
+.PHONY : src/args_check.o
 
 # target to build an object file
-statistic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.o
-.PHONY : statistic.c.o
+src/args_check.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/args_check.c.o
+.PHONY : src/args_check.c.o
 
-statistic.i: statistic.c.i
-.PHONY : statistic.i
+src/args_check.i: src/args_check.c.i
+.PHONY : src/args_check.i
 
 # target to preprocess a source file
-statistic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.i
-.PHONY : statistic.c.i
+src/args_check.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/args_check.c.i
+.PHONY : src/args_check.c.i
 
-statistic.s: statistic.c.s
-.PHONY : statistic.s
+src/args_check.s: src/args_check.c.s
+.PHONY : src/args_check.s
 
 # target to generate assembly for a file
-statistic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/statistic.c.s
-.PHONY : statistic.c.s
+src/args_check.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/args_check.c.s
+.PHONY : src/args_check.c.s
+
+src/statistic.o: src/statistic.c.o
+.PHONY : src/statistic.o
+
+# target to build an object file
+src/statistic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/statistic.c.o
+.PHONY : src/statistic.c.o
+
+src/statistic.i: src/statistic.c.i
+.PHONY : src/statistic.i
+
+# target to preprocess a source file
+src/statistic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/statistic.c.i
+.PHONY : src/statistic.c.i
+
+src/statistic.s: src/statistic.c.s
+.PHONY : src/statistic.s
+
+# target to generate assembly for a file
+src/statistic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/statistic.c.s
+.PHONY : src/statistic.c.s
 
 # Help Target
 help:
@@ -210,15 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
-	@echo "... args_check.o"
-	@echo "... args_check.i"
-	@echo "... args_check.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... statistic.o"
-	@echo "... statistic.i"
-	@echo "... statistic.s"
+	@echo "... src/args_check.o"
+	@echo "... src/args_check.i"
+	@echo "... src/args_check.s"
+	@echo "... src/statistic.o"
+	@echo "... src/statistic.i"
+	@echo "... src/statistic.s"
 .PHONY : help
 
 
